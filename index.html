@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="calculator">
+            <h3 class="text-center mb-4">Calculator</h3>
+            <div class="display" id="display">0</div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <button class="btn btn-info btn-calc" onclick="toggleAngleMode()">RAD</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay('(')">(</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay(')')">)</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-danger btn-calc" onclick="clearDisplay()">C</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-calc" onclick="calculateFactorial()">x!</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-calc" onclick="calculateSin()">sin</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-calc" onclick="calculateCos()">cos</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-calc" onclick="calculateTan()">tan</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-calc" onclick="calculatePower()">x^y</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-calc" onclick="calculateLog()">log</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-calc" onclick="calculateLn()">ln</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-calc" onclick="calculateSqrt()">√</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay('7')">7</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay('8')">8</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay('9')">9</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary btn-calc" onclick="appendToDisplay('/')">/</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay('4')">4</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay('5')">5</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay('6')">6</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary btn-calc" onclick="appendToDisplay('*')">×</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay('1')">1</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay('2')">2</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay('3')">3</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary btn-calc" onclick="appendToDisplay('-')">-</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay('0')">0</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-light btn-calc" onclick="appendToDisplay('.')">.</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-success btn-calc" onclick="calculate()">=</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary btn-calc" onclick="appendToDisplay('+')">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-calc" onclick="calculatePi()">π</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-secondary btn-calc" onclick="calculateE()">e</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-info btn-calc" onclick="memoryStore()">MS</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-info btn-calc" onclick="memoryRecall()">MR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
